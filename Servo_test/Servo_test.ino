@@ -17,7 +17,7 @@ void loop() {
   // initial position
   
   Voltage= analogRead(A1);
-  angle=map(Voltage, 0,1024,0,180); 
+  angle=map(Voltage, 0,1023,0,180); 
   
   myservo.write(angle);
   
