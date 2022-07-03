@@ -1,7 +1,7 @@
 #include <Servo.h>
 Servo myservo;
 
-double Voltage;
+double Voltage; 
 double angle  ;
 
 
@@ -16,10 +16,11 @@ void loop() {
   // put your main code here, to run repeatedly:
   // initial position
   
-  Voltage= analogRead(A1);
-  angle=map(Voltage, 0,1023,0,180); 
+  Voltage= analogRead(A1); // reading the voltage in the potentiometer
+  angle=map(Voltage, 0,1023,0,180); // converting the voltage to angle between 0 & 180
   
-  myservo.write(angle);
+  
+  myservo.write(angle); // change the the servo angle
   
   
   
