@@ -10,6 +10,34 @@ the servo motor has 3 pins:
 here is the circuit for the servo motor controled by a potentiometer
 ![alt text](https://github.com/Maashn5/Motors/blob/main/Servo_test/servo%20motor%20movement.png)
 & here is the code 
-![alt text](https://github.com/Maashn5/Motors/blob/main/Servo_test/Servo_test.ino)
+```c++
+#include <Servo.h>
+Servo myservo;
+
+double Voltage; 
+double angle  ;
+
+
+void setup() {
+  // put your setup code here, to run once:
+myservo.attach(3) ;
+  
+ 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  // initial position
+  
+  Voltage= analogRead(A1); // reading the voltage in the potentiometer
+  angle=map(Voltage, 0,1023,0,180); // converting the voltage to angle between 0 & 180
+  
+  
+  myservo.write(angle); // change the the servo angle
+  
+  
+  
+}
+```
 ## Stepper Motor
 ## Brushless Motor
