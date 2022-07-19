@@ -1,5 +1,5 @@
 # Motors
-here is the circuts & codes for sevral types of the motors
+here is the circuits & codes for sevral types of the motors
 ## Servo Motor
 The servo motor rotates in a certain angle between 0 & 180
 The servo motor consist of regular DC motor with electronic control board & some gears to maintain its angle position
