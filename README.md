@@ -42,8 +42,8 @@ void loop() {
 }
 ```
 ## Stepper Motor
-The stepper motor can be treated as an angle motor or as a speed motor.
-The stepper rotate in steps at a certain speed, each step has a particular angle for a certain motor
+The stepper motor can be treated as an angle motor or as a speed motor
+<br /> The stepper rotate in steps at a certain speed, each step has a particular angle for a certain motor
 The stepper motor consist of colis & magnets , the coils turns on in a certain pattern to occur the steps
 ![alt text](https://www.amci.com/files/6215/9363/2691/stepper_current_4_steps.jpg)
 The stepper motor require a driver to connect it to the arduino 
