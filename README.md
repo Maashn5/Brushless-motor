@@ -111,3 +111,38 @@ void loop()
 }
 ```
 ## Brushless Motor
+The brushless (BLDC) motor is a speed motor
+<br /> The difference butween BLDC & the dc motor is the commutator, in the DC motor the commutation is mechanical and <br /> it done by the brushes ( this causing some noise & power losses) , but in BLDC the commutation is done by an electronic switches so there is no brushes
+![alt text](https://www.ato.com/Content/Images/uploaded/brushed-dc-motor-vs-brushless-dc-motor.jpg)
+The BLDC need a driver since the commutator is electronic 
+<br /> here is the circuit for bldc ( here I used general ESC since there sevral types with different voltages & maximum current absorbed)
+![alt text](https://github.com/Maashn5/Motors/blob/main/BLDC_ESC/brushless%20motor.png)
+& here is the code 
+```c++
+#include <Servo.h>
+Servo ESC_BLDC;
+
+double Voltage; 
+double Speed  ;
+
+
+void setup() {
+  // put your setup code here, to run once:
+ESC_BLDC.attach(6) ;
+  
+ 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ 
+  Voltage = analogRead(A1); // reading the voltage in the potentiometer
+  Speed = map(Voltage, 0,1023,0,180); // converting the voltage to Speed between 0 & 180
+  
+  
+  ESC_BLDC.write(Speed); // change the the BLDC Speed
+  
+  
+  
+}
+```
